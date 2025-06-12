@@ -10,7 +10,8 @@
 <body>
   <div class="form-container">
     <h1>Feedback Form</h1>
-    <form action="#" method="post">
+
+    <form id="feedbackForm" action="#" method="post">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" placeholder="Write your name" required />
 
@@ -26,7 +27,13 @@
       <button type="submit">Submit</button>
     </form>
 
+    <!-- mesaj de confirmare -->
+    <div id="resultMessage"></div>
+
     <a href="../index.html" class="back-link">← Back to Topics</a>
   </div>
+
+  <!-- Script JS -->
+  <script src="form-script.js"></script>
 </body>
 </html>
