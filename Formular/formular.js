@@ -1,21 +1,25 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('feedbackForm');
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("feedbackForm");
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault(); // Previne trimiterea către server
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Oprește trimiterea formularului
 
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value;
-    const opinion = document.getElementById('opinion').value.trim();
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
+    const opinion = document.getElementById("opinion").value.trim();
 
-    console.log('Form submitted:');
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Password:', password);
-    console.log('Opinion:', opinion);
+    // Poți folosi și un obiect
+    const data = {
+      Name: name,
+      Email: email,
+      Password: password,
+      Opinion: opinion,
+    };
 
-    alert('Thank you for your feedback!');
+    console.log("Form data received:", data);
+    alert("Thank you for your feedback!");
+
     form.reset(); // Golește câmpurile
   });
 });
